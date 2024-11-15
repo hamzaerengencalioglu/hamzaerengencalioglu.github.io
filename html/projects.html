@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr" class="projects">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Eren Gençalioğlu</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/project.js" defer></script>
+    <script src="../js/clock.js" defer></script>
+</head>
+<body>
+    <div id="clock"></div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="../index.html">Anasayfa</a></li>
+            <li><a href="about.html">Hakkımda</a></li>
+            <li><a href="projects.html"class="active">Projelerim</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Projelerim</h1>
+    </header>
+    <div class="filter-buttons">
+        <button id="allProjectsButton">Bütün Projeler</button>
+        <button id="gameProjectsButton">Oyun Projeleri</button>
+        <button id="webProjectsButton">Web Projeleri</button>
+    </div>
+<div class="project-gallery">
+    <div class="project" data-id="project1" data-category="web" onclick="openModal('project1')">
+        <img src="../assets/proje1.jpg" alt="Proje Küçük Resmi">
+        <h2>Emlak Web Sitesi</h2>
+        <div class="modal-data" data-image="../assets/proje1.jpg" data-description="Bu proje, ASP.NET Core 8.0, Dapper ve diğer modern teknolojilerle geliştirilmiş bir emlak sitesi uygulamasıdır. Kullanıcılar, ilanları arayarak farklı kriterlere göre filtreleme yapabilirken, yöneticiler ilan ekleme, düzenleme ve silme işlemlerini gerçekleştirebilir. ASP.NET Core 8.0 API yapısı ile güvenli ve hızlı işlemler sağlanırken, Dapper ORM kullanılarak veritabanı işlemleri optimize edilmiştir. Mobil uyumlu responsive tasarımı sayesinde, site her cihazda rahatlıkla kullanılabilir. Proje, kullanıcı ve yönetici paneli, veritabanı yönetimi gibi alanlarda deneyim kazandırarak, .NET ekosistemindeki en yeni araçlarla çalışma fırsatı sunmaktadır."></div>
+    </div>
+    <div class="project" data-id="project2" data-category="game" onclick="openModal('project2')">
+        <img src="../assets/proje2.jpg" alt="Proje Küçük Resmi">
+        <h2>2D oyun</h2>
+        <div class="modal-data" data-image="../assets/proje2.jpg" data-description="
+        Bir Game Jam etkinliğinde, birkaç arkadaşım ile birlikte bir 2D oyun geliştirdik. Oyunumuz, oyuncuların çeşitli engelleri aşarak bir hedefe ulaşmaya çalıştığı, renkli grafiklerle bezeli bir platform türündeydi. Oyun mekanikleri, basit ama eğlenceli bir deneyim sunmayı amaçlıyordu. Unity oyun motoru ve C# programlama dili kullanarak, oyunun temel işlevlerini geliştirdik. Zaman kısıtlamalarıyla başa çıkabilmek için oyun seviyelerinin zorluklarını aşamalı olarak artırdık.
+        Görseller için 2D karakterler ve çevre öğeleri tasarladık, animasyonları da buna göre uyarladık. Ayrıca, oyuncunun deneyimini daha dinamik hale getirmek için ses efektleri ve arka plan müziği ekledik. Proje süreci boyunca takım olarak hızlıca iş bölümü yaparak, her aşamada birbirimize destek olduk. Test ve iyileştirme aşamalarında ise oyun, geri bildirimlere göre şekillendirildi. Bu süreç, sadece teknik becerilerimi geliştirmemi sağlamakla kalmadı, aynı zamanda takım çalışması ve zaman yönetimi gibi önemli beceriler kazandırdı."></div>
+    </div>
+    <div class="project" data-id="project3" data-category="web" onclick="openModal('project3')">
+        <img src="../assets/proje3.jpg" alt="Proje Küçük Resmi">
+        <h2>Kişisel Web Sitesi</h2>
+        <div class="modal-data" data-image="../assets/proje3.jpg" data-description="Web ve mobil programlama dersim için, hazır bir şablon kullanarak bir web sitesi tasarladım. Bu proje, ders kapsamında öğrendiğim HTML, CSS ve temel JavaScript bilgilerini pratiğe dökme fırsatı sundu. Şablon, site tasarımının temel yapısını sağlayarak, içerik düzeni ve görsel uyumu açısından işimi kolaylaştırdı. Ancak, şablonun sunduğu yapı üzerinde çeşitli özelleştirmeler yaparak, siteyi dersin gereksinimlerine uygun hale getirdim.Web sitesinde kullanıcı dostu bir arayüz ve modern bir tasarım hedefledim. Sayfalarda gezinmeyi kolaylaştırmak için sade ve işlevsel bir menü yapısı kullandım. Ayrıca, siteye interaktif özellikler eklemek amacıyla temel JavaScript fonksiyonlarını kullandım. Mobil uyumluluğa da özen göstererek, responsive (duyarlı) tasarım prensiplerine dikkat ettim. Böylece site, farklı ekran boyutlarında sorunsuz bir şekilde görüntülenebiliyor.Bu proje, web tasarımı ve geliştirme konusunda edindiğim bilgileri pekiştirmemi sağladı ve gelecekteki projelerimde daha özgün tasarımlar geliştirme konusunda bana önemli bir deneyim kazandırdı."></div>
+    </div>
+</div>
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Proje Resmi">
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+</body>
+</html>
